@@ -1,0 +1,47 @@
+    .SYNOPSIS
+     
+        Function to create new domain on MaestroPanel.
+ 
+    .DESCRIPTION
+     
+        This function creates domains on MaestroPanel by using pre-configured domain plans.
+		You can also enable domain user on that domain for administration purposes.
+             
+    .PARAMETER  WhatIf
+     
+        Display what would happen if you would run the function with given parameters.
+    
+    .PARAMETER  Confirm
+     
+        Prompts for confirmation for each operation. Allow user to specify Yes/No to all option to stop prompting.
+    
+    .EXAMPLE
+     
+        New-MaestroDomain -Domain "domain.com" -Plan "GoldPlan" -Username "domain.com" -Password "PassW0Rd!"
+        Creates new domain on MaestroPanel called "domain.com" by using "GoldPlan" domain plan.
+		
+    .EXAMPLE
+     
+        New-MaestroDomain -Domain "domain.com" -Plan "GoldPlan" -Username "domain.com" -Password "PassW0Rd!" -EnableUser -FirstName "John" -LastName "Doe" -Mail "jd@mail.com"
+        Creates new domain on MaestroPanel called "domain.com" and enables domain user called "John Doe".
+		
+    .INPUTS
+         
+        Domain name, Plan name and User informations.
+ 
+    .OUTPUTS
+ 
+        Result Message.
+	
+    .NOTES
+         
+        Author: Yusuf Ozturk
+        Website: http://www.yusufozturk.info
+        Email: ysfozy[at]gmail.com
+        Date created: 03-May-2011
+        Last modified: 14-Feb-2012
+        Version: 1.0
+ 
+    .LINK
+        
+        http://www.maestropanel.com
